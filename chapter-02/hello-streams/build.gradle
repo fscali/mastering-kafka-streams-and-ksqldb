@@ -15,7 +15,7 @@ plugins {
 
     // Used for code formatting
     // https://plugins.gradle.org/plugin/com.github.sherter.google-java-format
-    id 'com.github.sherter.google-java-format' version '0.8'
+   // id 'com.github.sherter.google-java-format' version '0.8'
 }
 
 repositories {
@@ -45,11 +45,11 @@ test {
 }
 
 // code formatting
-tasks.withType(JavaCompile).configureEach { javaCompile ->
-  javaCompile.dependsOn 'googleJavaFormat'
-  options.compilerArgs << "-Xlint:deprecation"
-  options.encoding = 'UTF-8'
-}
+// tasks.withType(JavaCompile).configureEach { javaCompile ->
+//   javaCompile.dependsOn 'googleJavaFormat'
+//   options.compilerArgs << "-Xlint:deprecation"
+//   options.encoding = 'UTF-8'
+// }
 
 task runDSL(type: JavaExec) {
     main = 'com.example.DslExample'
